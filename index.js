@@ -60,11 +60,9 @@ const questions = [ {
 
 ];
 //
-// for (let i = 0; i < questions.length; i++) {
-// console.log(questions[i].name);
-// }
-
-
+for (let i = 0; i < questions.length; i++) {
+console.log(questions[i].name);
+}
 
 
 // TODO: Create a function to write README file
@@ -73,6 +71,7 @@ function writeToFile(fileName, data) {
     ,(err) =>
     err ? console.error(err) : console.log('Commit logged!'
     ))
+    
    
 }
 
@@ -84,6 +83,7 @@ function init() {
     // questions.push(response)
     writeToFile('README2.md', response); //response goes into data at 26
     console.log(response);
+
   }
   );
 }

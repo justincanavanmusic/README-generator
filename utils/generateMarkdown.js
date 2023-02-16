@@ -1,18 +1,17 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-if (license==="something") {
-  return "badge1"
-}else {
-  return "badge2"
+if (license==="MIT") {
+  console.log("badge1")
+if (license==="Apache") 
+  console.log("badge2")
+if (license==="none") 
+  console.log("")
 }
+// renderLicenseBadge(`${data.license}`);
 }
 
-renderLicenseBadge("something");
-  // if(${data.license}===)
- //if license is "sdfasdf" return   "sfasdf"
-//else return "";
-// renderLicenseBadge("something");
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
