@@ -1,16 +1,16 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
-// let badgeURL=https://img.shields.io/github/license/${data.username}/${data.repo}
+// let badgeURL="https://img.shields.io/github/license/${data.username}/${data.repo}"
 
 
 function renderLicenseBadge(license) {
 if (license==="MIT") {
-  return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
+  return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
 } else if (license==="Apache"){ 
-  return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"
+  return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
 } else if (license==="none") {
-  return ""
+  return "";
 }
 
 // if (license==="none") {
@@ -25,19 +25,22 @@ if (license==="MIT") {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license==="MIT") {
-    return "https://mit-license.org/"
-  } else if (license==="Apache"){ 
-    return "https://www.apache.org/licenses/LICENSE-2.0.txt"
-  } else if (license==="none") {
-    return ""
+  if(license !== 'none') {
+    return `- [License](#license)`
+  } else {
+  return '';
   }
+
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
- 
+  if(license !== 'none') {
+    return `## License`
+  } else {
+  return '';
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -55,7 +58,7 @@ ${data.description}
 ${data.contents}
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+${renderLicenseLink(data.license)}
 - [Credits](#credits)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -68,8 +71,7 @@ ${data.installation}
 
 ${data.usage}
 
-## License
-${data.license}
+${renderLicenseSection(data.license)}
 
 ## Credits
 
@@ -85,9 +87,7 @@ Feel free to contact me with any questions!
 
 ### Email: ${data.email}
 
-
 ### Phone: 201-218-8720
-
 
 ### Github Username: ${data.username}
 
@@ -95,10 +95,6 @@ Feel free to contact me with any questions!
 [Check out my GitHub!](https://github.com/justincanavanmusic/)
 `
 
-
-
-
 }
-
 
 module.exports = generateMarkdown;

@@ -80,13 +80,19 @@ function writeToFile(fileName, data) {
     
    
 }
+// function customPrompt(name) {
+//   if (name === 'justin') {
+//     return Promise.resolve('this name is good'); 
+//   } else if (name === 'steven') {
+//     return Promise.reject('this name is bad')
+//   }
+// }
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer
+  inquirer //package
   .prompt (questions)   //array of the objects
   .then((response) => { //name of each prompt+user input
-   
     writeToFile('README2.md', response); //response goes into data at 26
     // console.log(response);
 
