@@ -66,9 +66,9 @@ const questions = [ {
 
 ];
 //
-for (let i = 0; i < questions.length; i++) {
-console.log(questions[i].name);
-}
+// for (let i = 0; i < questions.length; i++) {
+// // console.log(questions[i].name);
+// }
 
 
 // TODO: Create a function to write README file
@@ -86,7 +86,7 @@ function init() {
   inquirer
   .prompt (questions)   //array of the objects
   .then((response) => { //name of each prompt+user input
-    // questions.push(response)
+   
     writeToFile('README2.md', response); //response goes into data at 26
     // console.log(response);
 
