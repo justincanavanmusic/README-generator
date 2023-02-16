@@ -55,8 +55,14 @@ const questions = [ {
    type: 'input',
    message: 'What is your email address?',
    name: 'email',
-
  },
+
+ {
+  type: 'input',
+  message: 'What is your GitHub repo name?',
+  name: 'repo',
+},
+ 
 
 ];
 //
@@ -82,7 +88,7 @@ function init() {
   .then((response) => { //name of each prompt+user input
     // questions.push(response)
     writeToFile('README2.md', response); //response goes into data at 26
-    console.log(response);
+    // console.log(response);
 
   }
   );

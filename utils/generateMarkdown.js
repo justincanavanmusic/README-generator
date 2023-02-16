@@ -2,14 +2,17 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 if (license==="MIT") {
-  console.log("badge1")
-if (license==="Apache") 
-  console.log("badge2")
-if (license==="none") 
-  console.log("")
+  console.log("badge1");
+} else if (license==="Apache"){ 
+  console.log("badge2");
+} else if (license==="none") {
+  console.log("");
 }
+
+}
+renderLicenseBadge(`${data.license}`);
+
 // renderLicenseBadge(`${data.license}`);
-}
 
 
 
@@ -25,7 +28,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+return `# ${data.title}
 
 ## Description 
 
@@ -72,6 +75,9 @@ Feel free to contact me with any questions!
 
 [Check out my GitHub!](https://github.com/justincanavanmusic/)
 `;
+
+
 }
+
 
 module.exports = generateMarkdown;
