@@ -56,9 +56,14 @@ const questions = [ {
    message: 'What is your email address?',
    name: 'email',
 
+ },
 
- },];
+];
 //
+// for (let i = 0; i < questions.length; i++) {
+// console.log(questions[i].name);
+// }
+
 
 
 
@@ -68,7 +73,7 @@ function writeToFile(fileName, data) {
     ,(err) =>
     err ? console.error(err) : console.log('Commit logged!'
     ))
-    // console.log(questions.choices);
+   
 }
 
 // TODO: Create a function to initialize app
@@ -78,6 +83,7 @@ function init() {
   .then((response) => { //name of each prompt+user input
     // questions.push(response)
     writeToFile('README2.md', response); //response goes into data at 26
+    console.log(response);
   }
   );
 }
