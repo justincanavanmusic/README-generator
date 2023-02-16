@@ -19,11 +19,32 @@ const questions = [ {
     message: 'Can you make a Table of Contents for your project?',
     name: 'contents',
   },
-
+  {
+    type: 'list',
+    message: 'Which license are you using?',
+    choices: ['MIT', "Apache", "none"],
+    name: 'license'
+  },
  {
     type: 'input',
     message: 'Can you give installation instructions?',
     name: 'installation',
+  },
+  {
+    type: 'input',
+    message: 'Can you provide instructions for usage?',
+    name: 'usage',
+  },
+
+  {
+    type: 'input',
+    message: 'Can you list some tests to run on your application?',
+    name: 'tests',
+  },
+    {
+    type: 'input',
+    message: 'Can you list any collaborators along with their Github links?',
+    name: 'credits',
   },
  {
    type: 'input',
@@ -34,15 +55,20 @@ const questions = [ {
    type: 'input',
    message: 'What is your email address?',
    name: 'email',
+
+
  },];
 //
+
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
       fs.writeFile('README2.md', generateMarkdown(data)
     ,(err) =>
-    err ? console.error(err) : console.log('Commit logged!'))
+    err ? console.error(err) : console.log('Commit logged!'
+    ))
+    // console.log(questions.choices);
 }
 
 // TODO: Create a function to initialize app
